@@ -12,7 +12,7 @@ html, body{
   /* overflow: hidden; */
 }
 
-#main{
+#maincnt{
   width: 100%;
   position: relative;
   transform: none !important;
@@ -717,104 +717,121 @@ html, body{
 
 
 /* ============== MOBILE RESPONSIVE ONLY ============ */
-
-
 @media (max-width: 768px) {
 
   html, body {
+    width: 100%;
     overflow-x: hidden;
   }
 
-  /* NAV */
+  /* ================= NAV ================= */
   #home #nav {
-    height: 70px;
-    padding: 0 6vw;
+    height: auto;
+    padding: 4vw 6vw;
+    flex-wrap: wrap;
+    gap: 4vw;
   }
 
   #nav a {
     font-size: 12px;
   }
 
-  /* HERO ROW */
+  #home #navimg img {
+    height: 60vh;
+  }
+
+  /* ================= HERO ================= */
   .row {
     flex-direction: column;
     align-items: flex-start;
     padding: 0 6vw;
-    padding-right: 6vw;
-    margin-top: 20vw;
+    height: auto;
     gap: 6vw;
+    margin-top: 20vw;
   }
 
   .row h1 {
+    width: 100%;
     font-size: 18vw;
-    margin-top: 0;
+    line-height: 1.1;
   }
 
   .row .text {
     margin-top: 0;
   }
 
-  /* VISUAL / DESIGNER ROW */
+  .row h5 {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+  }
+
+  /* ================= VISUAL ROW ================= */
   .row-visual {
     flex-direction: column;
     align-items: flex-start;
-    gap: 2vw;
     padding: 0 6vw;
-    /* background-color: black; */
+    margin-top: 8vw;
+    gap: 4vw;
   }
 
   .row-visual img {
-    margin-top: 0;
+    width: 40px;
+    height: auto;
   }
 
   #vtext,
   #designer {
+    width: 100%;
     margin-left: 0;
-    font-size: 14vw;
+    font-size: 16vw;
   }
 
-  /* IMAGERY SECTION */
+  /* ================= IMAGERY ================= */
   #imagery {
     flex-direction: column;
-    padding: 12vw 6vw;
-    margin-top: 25vw;
+    padding: 16vw 6vw;
     gap: 12vw;
   }
 
-  #imagery #imglef,
+  #imglef,
   #imgrig {
     width: 100%;
   }
 
   #imglef h1 {
     font-size: 5vw;
+    line-height: 1.4;
   }
 
   #imgrig {
+    position: relative;
     height: 90vw;
   }
 
   #imgrig .imgcntnr {
+    position: absolute;
     width: 60vw;
     height: 80vw;
     left: 50%;
+    transform: translateX(-50%);
   }
 
-  /* WORK SECTION */
+  /* ================= WORK ================= */
   #work {
-    margin-top: 10vw;
+    height: auto;
+    padding-bottom: 20vw;
   }
 
   #work::before {
-    top: -18vw;
+    top: -20vw;
     height: 120px;
   }
 
-  #work .workrow {
+  .workrow {
     flex-direction: column;
     align-items: flex-start;
-    gap: 6vw;
     padding: 0 6vw;
+    gap: 6vw;
   }
 
   .workrow h1 {
@@ -826,23 +843,61 @@ html, body{
   }
 
   .leftdownarrow {
-    width: 16vw;
+    width: 18vw;
   }
 
-  /* FEATURE IMAGES */
+  /* ================= FEATURE MEDIA ================= */
   #images {
     flex-direction: column;
-    gap: 12vw;
     padding: 0 6vw;
+    gap: 12vw;
   }
 
-  .cnt1,
-  .cnt2 {
+  .cnt {
     width: 100%;
     height: auto;
   }
 
-  .cnt img {
+  .cnt img,
+  .cnt video {
     width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  #imgaes2 {
+    padding: 0 6vw;
+  }
+
+  .cnt3 {
+    width: 100%;
+  }
+
+  /* ================= CONTACT ================= */
+  #contact {
+    padding: 20vw 6vw;
+    min-height: auto;
+  }
+
+  .contact-inner {
+    width: 100%;
+  }
+
+  .contact-title {
+    font-size: 16vw;
+  }
+
+  .contact-sub {
+    font-size: 12px;
+    margin-bottom: 6vw;
+  }
+
+  .contact-links {
+    gap: 8vw;
+  }
+
+  .contact-links a {
+    width: 44px;
+    height: 44px;
   }
 }
