@@ -185,38 +185,38 @@ function updateLocalTime() {
 // ===============================
 // LOCOMOTIVE SCROLL
 // ===============================
-// let locoScroll;
+let locoScroll;
 
-// function locoInitialize() {
-//   locoScroll = new LocomotiveScroll({
-//     el: document.querySelector("#maincnt"),
-//     smooth: true
-//   });
+function locoInitialize() {
+  locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#maincnt"),
+    smooth: true
+  });
 
-//   setTimeout(() => {
-//     locoScroll.update();
-//   }, 1000);
-// }
+  setTimeout(() => {
+    locoScroll.update();
+  }, 1000);
+}
 
 
 // ===============================
 // NAV SMOOTH SCROLL (LOCOMOTIVE SAFE)
 // ===============================
-document.querySelectorAll('#nav a[data-scroll-to]').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
+// document.querySelectorAll('#nav a[data-scroll-to]').forEach(link => {
+//   link.addEventListener('click', (e) => {
+//     e.preventDefault();
 
-    const targetId = link.dataset.scrollTo;
+//     const targetId = link.dataset.scrollTo;
 
-    if (!targetId) return;              // 🛑 safety
-    if (!locoScroll) return;            // 🛑 safety
+//     if (!targetId) return;              // 🛑 safety
+//     if (!locoScroll) return;            // 🛑 safety
 
-    locoScroll.scrollTo(`#${targetId}`, {
-      duration: 1.2,
-      easing: [0.25, 0.00, 0.35, 1.00]
-    });
-  });
-});
+//     locoScroll.scrollTo(`#${targetId}`, {
+//       duration: 1.2,
+//       easing: [0.25, 0.00, 0.35, 1.00]
+//     });
+//   });
+// });
 
 
 
@@ -261,4 +261,3 @@ animateVisualText();
 updateLocalTime();
 
 // cardShow();
-
