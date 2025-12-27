@@ -185,18 +185,18 @@ function updateLocalTime() {
 // ===============================
 // LOCOMOTIVE SCROLL
 // ===============================
-let locoScroll;
+// let locoScroll;
 
-function locoInitialize() {
-  locoScroll = new LocomotiveScroll({
-    el: document.querySelector("#maincnt"),
-    smooth: true
-  });
+// function locoInitialize() {
+//   locoScroll = new LocomotiveScroll({
+//     el: document.querySelector("#maincnt"),
+//     smooth: true
+//   });
 
-  setTimeout(() => {
-    locoScroll.update();
-  }, 1000);
-}
+//   setTimeout(() => {
+//     locoScroll.update();
+//   }, 1000);
+// }
 
 
 // ===============================
@@ -261,3 +261,4 @@ animateVisualText();
 updateLocalTime();
 
 // cardShow();
+
