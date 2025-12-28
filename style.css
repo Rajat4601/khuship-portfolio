@@ -716,132 +716,105 @@ html, body{
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* ============== MOBILE RESPONSIVE ONLY ============ */
+
+
 @media (max-width: 768px) {
 
   html, body {
-    width: 100%;
     overflow-x: hidden;
   }
 
-  /* ================= NAV ================= */
+  /* NAV */
   #home #nav {
-    height: auto;
-    padding: 4vw 6vw;
-    flex-wrap: wrap;
-    gap: 4vw;
+    height: 70px;
+    padding: 0 6vw;
   }
 
   #nav a {
     font-size: 12px;
   }
 
-  #home #navimg img {
-    height: 60vh;
-  }
-
-  /* ================= HERO ================= */
+  /* HERO ROW */
   .row {
     flex-direction: column;
     align-items: flex-start;
     padding: 0 6vw;
-    height: auto;
-    gap: 6vw;
+    padding-right: 6vw;
     margin-top: 20vw;
+    gap: 6vw;
   }
 
   .row h1 {
-    width: 100%;
     font-size: 18vw;
-    line-height: 1.1;
+    margin-top: 0;
   }
 
   .row .text {
     margin-top: 0;
   }
 
-  .row h5 {
-    font-size: 12px;
-    letter-spacing: 0.15em;
-  }
-
-  /* ================= VISUAL ROW ================= */
+  /* VISUAL / DESIGNER ROW */
   .row-visual {
     flex-direction: column;
     align-items: flex-start;
+    gap: 2vw;
     padding: 0 6vw;
-    margin-top: 8vw;
-    gap: 4vw;
+    /* background-color: black; */
   }
 
   .row-visual img {
-    width: 40px;
-    height: auto;
+    margin-top: 0;
   }
 
   #vtext,
   #designer {
-    width: 100%;
     margin-left: 0;
-    font-size: 16vw;
+    font-size: 14vw;
   }
 
-  /* ================= IMAGERY ================= */
+  /* IMAGERY SECTION */
   #imagery {
     flex-direction: column;
-    padding: 16vw 6vw;
+    padding: 12vw 6vw;
+    margin-top: 25vw;
     gap: 12vw;
   }
 
-  #imglef,
+  #imagery #imglef,
   #imgrig {
     width: 100%;
   }
 
   #imglef h1 {
     font-size: 5vw;
-    line-height: 1.4;
   }
 
   #imgrig {
-    position: relative;
     height: 90vw;
   }
 
   #imgrig .imgcntnr {
-    position: absolute;
     width: 60vw;
     height: 80vw;
     left: 50%;
-    transform: translateX(-50%);
   }
 
-  /* ================= WORK ================= */
+  /* WORK SECTION */
   #work {
-    height: auto;
-    padding-bottom: 20vw;
+    margin-top: 10vw;
   }
 
   #work::before {
-    top: -20vw;
+    top: -18vw;
     height: 120px;
   }
 
-  .workrow {
+  #work .workrow {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 6vw;
     gap: 6vw;
+    padding: 0 6vw;
   }
 
   .workrow h1 {
@@ -853,61 +826,23 @@ html, body{
   }
 
   .leftdownarrow {
-    width: 18vw;
+    width: 16vw;
   }
 
-  /* ================= FEATURE MEDIA ================= */
+  /* FEATURE IMAGES */
   #images {
     flex-direction: column;
-    padding: 0 6vw;
     gap: 12vw;
-  }
-
-  .cnt {
-    width: 100%;
-    height: auto;
-  }
-
-  .cnt img,
-  .cnt video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  #imgaes2 {
     padding: 0 6vw;
   }
 
-  .cnt3 {
+  .cnt1,
+  .cnt2 {
     width: 100%;
+    height: auto;
   }
 
-  /* ================= CONTACT ================= */
-  #contact {
-    padding: 20vw 6vw;
-    min-height: auto;
-  }
-
-  .contact-inner {
+  .cnt img {
     width: 100%;
-  }
-
-  .contact-title {
-    font-size: 16vw;
-  }
-
-  .contact-sub {
-    font-size: 12px;
-    margin-bottom: 6vw;
-  }
-
-  .contact-links {
-    gap: 8vw;
-  }
-
-  .contact-links a {
-    width: 44px;
-    height: 44px;
   }
 }
