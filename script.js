@@ -185,12 +185,25 @@ function updateLocalTime() {
 // ===============================
 // LOCOMOTIVE SCROLL
 // ===============================
+
 let locoScroll;
 
 function locoInitialize() {
+  if (window.innerWidth < 768) {
+    // ❌ NO locomotive on mobile
+    document.body.style.overflow = "auto";
+    return;
+  }
+
   locoScroll = new LocomotiveScroll({
     el: document.querySelector("#maincnt"),
-    smooth: true
+    smooth: true,
+    smartphone: {
+      smooth: false
+    },
+    tablet: {
+      smooth: false
+    }
   });
 
   setTimeout(() => {
@@ -257,7 +270,7 @@ valueSetters();
 loaderAnimation();
 
 animateVisualText();
-// locoInitialize();
+locoInitialize();
 updateLocalTime();
 
 // cardShow();
